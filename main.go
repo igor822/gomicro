@@ -1,18 +1,19 @@
 package main
 
 import (
-    "log"
-    "net/http"
-
+    "github.com/labstack/echo"
+    "github.com/labstack/echo/middleware"
     "github.com/igor822/gomicro/controller"
 )
 
 func main() {
-	router, err := controller.MapHandlers()
-	if err != nil {
-		panic(err)
-	}
+    e := echo.New()
+    e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+        AllowOrigins: []string{"*"},
+        AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
+    }))
 
-	log.Println("shipping-api started listening in :")
-	http.ListenAndServe(":80", router)
+    e.GET("/health", controller.CheckHealth)
+
+    e.Logger.Fatal(e.Start(":1323"))
 }

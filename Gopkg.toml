@@ -30,5 +30,5 @@
   unused-packages = true
 
 [[constraint]]
-  name = "github.com/gorilla/mux"
-  version = "v1.7.1"
+  name = "github.com/labstack/echo"
+  version = "3.1.0"
