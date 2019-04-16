@@ -1,15 +1,16 @@
 package controller
 
 import (
-	"io"
-	"net/http"
+    "net/http"
+    "github.com/labstack/echo"
 )
 
-func checkHealth(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusOK)
-	w.Header().Set("Content-Type", "application/json")
+type Health struct {
+    Status string `json:"status"`
+}
 
-	// In the future we could report back on the status of our DB, or our cache
-	// (e.g. Redis) by performing a simple PING, and include them in the response.
-	io.WriteString(w, `{"status": "UP"}`)
+func CheckHealth(c echo.Context) error {
+    health := Health{}
+    health.Status = "UP"
+    return c.JSON(http.StatusOK, health)
 }
