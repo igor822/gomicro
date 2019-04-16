@@ -1,7 +1,7 @@
-Micro Project
+Gomicro
 ==================
 
-This project has the objective of beign a skeleton for new micro services projects
+This project has the objective of being a skeleton for new micro services projects
 
 # Installation
 
