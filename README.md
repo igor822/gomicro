@@ -11,7 +11,7 @@ Install dependencies [dep](https://golang.github.io/dep/docs/installation.html)
 ## Configure
 
 ```sh
-dep ensure
+dep ensure -update -v
 ```
 
 ## Run

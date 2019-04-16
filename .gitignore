@@ -9,4 +9,4 @@ bin/
 config.ini
 debug
 vendor/
-shipping-api
+gomicro

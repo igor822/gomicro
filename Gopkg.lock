@@ -82,7 +82,7 @@
   name = "golang.org/x/sys"
   packages = ["unix"]
   pruneopts = "UT"
-  revision = "b44545bcd369ef9ff9bebcfebf5f3370ef9b1932"
+  revision = "3fd5a3612ccd7907f26270fa92579a0f2f76f734"
 
 [solve-meta]
   analyzer-name = "dep"

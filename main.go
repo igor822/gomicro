@@ -1,19 +1,21 @@
 package main
 
 import (
-    "github.com/labstack/echo"
-    "github.com/labstack/echo/middleware"
-    "github.com/igor822/gomicro/controller"
+	"github.com/igor822/gomicro/config"
+	"github.com/igor822/gomicro/controller"
+	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 )
 
 func main() {
-    e := echo.New()
-    e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-        AllowOrigins: []string{"*"},
-        AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
-    }))
+	e := echo.New()
+	g := e.Group("/gomicro/v1")
+	g.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"*"},
+		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
+	}))
 
-    e.GET("/health", controller.CheckHealth)
+	g.GET("/health", controller.CheckHealth)
 
-    e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":" + config.Port))
 }
