@@ -6,7 +6,7 @@ This project has the objective of being a skeleton for new micro services projec
 # What is this?
 
 Gomicro has the purpose to set a basic structure of a project using the [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).  
-With this skeleton you can create new apis, where it will have [echo](https://echo.labstack.com/) installed already.
+With this skeleton you can create new APIs, where it will have [echo](https://echo.labstack.com/) installed already.
 
 ## Basic structure
 
