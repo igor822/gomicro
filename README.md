@@ -10,11 +10,11 @@ With this skeleton you can create new APIs, where it will have [echo](https://ec
 
 ## Basic structure
 
-* appcontext/context.go: is our `container` of services and object within the project.
-* config/: in here you can define all necessary configuration your application needs to run.
-* domain/: `domain` folder you can define all structures (or entites) of the project
-* gateway/: it's related with infrastructure and connections with external world
-* usecase/: for any usecases and business rules of the application we define in this folder
+* `appcontext/context.go`: is our `container` of services and object within the project.
+* `config/`: here you can define all necessary configuration your application needs to run.
+* `domain/`: `domain` folder you can define all structures/entites of the project
+* `gateway/`: connections with external world, e.g. MongoDB, MySQL
+* `usecase/`: for any usecases and business rules of the application we define in this folder
 
 # Installation
 
