@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/igor822/gomicro/config"
 	"github.com/igor822/gomicro/controller"
+
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )
