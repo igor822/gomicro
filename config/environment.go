@@ -3,7 +3,7 @@ package config
 import "os"
 
 var (
-	// Port The port to be listened by application
+	// Port to be listened by application
 	Port string
 )
 
