@@ -14,7 +14,7 @@ With this skeleton you can create new APIs, where it will have [echo](https://ec
 * `config/`: defines all necessary configuration that your application needs to run.
 * `domain/`: defines all entities of the project
 * `gateway/`: defines all connections with the external world, e.g. MongoDB, MySQL
-* `usecase/`: for any usecases and business rules of the application we define in this folder
+* `usecase/`: defines the use cases and business rules of the application
 
 # Installation
 
