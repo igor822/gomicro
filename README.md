@@ -16,18 +16,7 @@ With this skeleton you can create new APIs, where it will have [echo](https://ec
 * `gateway/`: defines all connections with the external world, e.g. MongoDB, MySQL
 * `usecase/`: defines the use cases and business rules of the application
 
-# Installation
-
-Install go
-Install dependencies [dep](https://golang.github.io/dep/docs/installation.html)
-
-## Configure
-
-```sh
-dep ensure -update -v
-```
-
-## Run
+# Build
 
 ```sh
 go build
